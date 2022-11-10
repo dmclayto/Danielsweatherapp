@@ -66,7 +66,7 @@ button.addEventListener('click', (performAction) =>{
     getWeather (information)
    
    .then (function(data ) {
-      postData('http://localhost:8089/post',{temp: Math.round(data.main.temp),temp_max: Math.round(data.main.temp_max),temp_min: Math.round(data.main.temp_min), town: data.name, humidity: data.main.humidity, pressure: data.main.pressure, wind: data.wind.speed, description: data.weather[0].description, icon: data.weather[0].icon, timezone: data.timezone, clouds: data.clouds.all})
+      postData('https://myweatherappus.herokuapp.com//post',{temp: Math.round(data.main.temp),temp_max: Math.round(data.main.temp_max),temp_min: Math.round(data.main.temp_min), town: data.name, humidity: data.main.humidity, pressure: data.main.pressure, wind: data.wind.speed, description: data.weather[0].description, icon: data.weather[0].icon, timezone: data.timezone, clouds: data.clouds.all})
        
       .then (()=>{
           getCoordinates(information)
@@ -75,14 +75,14 @@ button.addEventListener('click', (performAction) =>{
         getweatherbit ( weatherbitwebCurrent + webLat + coord[1] + webLon + coord[0] + weatherbitAPIKey)
         
         .then ((data)=>{
-        postData ('http://localhost:8089/postMore', {statecode: data.state_code, timezone: data.timezone})
+        postData ('https://myweatherappus.herokuapp.com/postMore', {statecode: data.state_code, timezone: data.timezone})
       
   .then (()=>{
 getTime (clockURL + latitude + coord[1] + longitude + coord[0])
   
 .then ((data)=>{
 
-postData ('http://localhost:8089/postTime',{time: data.time, dayOfWeek: data.dayOfWeek, date: data.date})
+postData ('https://myweatherappus.herokuapp.com/postTime',{time: data.time, dayOfWeek: data.dayOfWeek, date: data.date})
       
    
   
@@ -141,9 +141,9 @@ const postData = async( url, data = {}) => {
 
 //updating the app 
 const updateUI = async () => {
-  const request = await fetch('http://localhost:8089/all');
-  const request2 = await fetch('http://localhost:8089/more');
-  const request3 = await fetch('http://localhost:8089/time');
+  const request = await fetch('https://myweatherappus.herokuapp.com/all');
+  const request2 = await fetch('https://myweatherappus.herokuapp.com/more');
+  const request3 = await fetch('https://myweatherappus.herokuapp.com/time');
   try{
     const allData = await request.json();
     const yo = await request2.json();
