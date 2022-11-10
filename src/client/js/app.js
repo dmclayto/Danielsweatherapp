@@ -190,7 +190,7 @@ message.style.cssText = `background: rgb(37, 59, 105); border-radius: 10px; padd
 }
 
 
-
+/*
 // extra part
 
 // get coordiates for next api
@@ -233,7 +233,7 @@ const getweatherbit = async (url) =>{
 };
 
 
-
+*/
 //api clock
 
 const clockURL = "https://timeapi.io/api/Time/current/coordinate?"
