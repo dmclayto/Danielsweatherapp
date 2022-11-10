@@ -32,9 +32,9 @@ app.use(express.static('website'));
 // Setup Server
 
 let port = process.env.PORT;
-if (port == null || port == "") {
- port = 8089;
-}
+//if (port == null || port == "") {
+// port = 8089;
+//}
 app.listen(port);
 
 // Callback to debug
