@@ -19,19 +19,22 @@ app.use(bodyParser.json());
 
 // Cors for cross origin allowance
 const cors = require ('cors');
-const { request } = require('http');
+//const { request } = require('http');
 const { response } = require('express');
 
 app.use(cors ());
 
 // Initialize the main project folder
-app.use(express.static('website'));
+app.use(express.static('dist'));
 
-
+app.get('/all', function (req, res) {
+  res.sendFile('dist/index.html')
+// res.sendFile(path.resolve('src/client/views/index.html'))
+})
 
 // Setup Server
 
-let port = process.env.PORT;
+let port = process.env.PORT || 8089;
 //if (port == null || port == "") {
 // port = 8089;
 //}
