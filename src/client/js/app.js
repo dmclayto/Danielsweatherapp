@@ -77,12 +77,12 @@ button.addEventListener('click', (performAction) =>{
        // .then ((data)=>{
        // postData ('https://myweatherappus.herokuapp.com/postMore', {statecode: data.state_code, timezone: data.timezone})
       
-  .then ((coord)=>{
-getTime (clockURL + latitude + coord[1] + longitude + coord[0])
+ // .then ((coord)=>{
+//getTime (clockURL + latitude + coord[1] + longitude + coord[0])
   
-.then ((data)=>{
+//.then ((data)=>{
 
-postData ('https://myweatherappus.herokuapp.com/postTime',{time: data.time, dayOfWeek: data.dayOfWeek, date: data.date})
+//postData ('https://myweatherappus.herokuapp.com/postTime',{time: data.time, dayOfWeek: data.dayOfWeek, date: data.date})
       
    
   
@@ -95,8 +95,8 @@ postData ('https://myweatherappus.herokuapp.com/postTime',{time: data.time, dayO
 
   });
 })
-})
-})
+//})
+//})
 //})
 //})
 // Get the data from API. 
@@ -171,8 +171,8 @@ const updateUI = async () => {
  
  message.innerHTML= `<p>Weather for ${allData[1].town}</p>`;
  //zone.innerHTML = `<p>${yo.timezone}</p>`;
- time.innerHTML = `<p> ${areaTime.time}`
- date.innerHTML = `<p> ${areaTime.dayOfWeek}  ${areaTime.date} `
+ //time.innerHTML = `<p> ${areaTime.time}`
+ //date.innerHTML = `<p> ${areaTime.dayOfWeek}  ${areaTime.date} `
  
  //dynamic styling
 icon.style.cssText = `background: rgba(24,24,27,0.6); border-radius: 10px;`;
@@ -191,6 +191,7 @@ message.style.cssText = `background: rgb(37, 59, 105); border-radius: 10px; padd
 
 
 
+/*
 // extra part
 
 // get coordiates for next api
@@ -210,7 +211,6 @@ const coord = [lon , lat];
 };
 
 
-/*
 const weatherbitAPIKey = "&key=764f8e42e2ae4fd1bc5d46711259417c";
 const weatherbitwebCurrent =  "http://api.weatherbit.io/v2.0/forecast/daily?";
 const webLat = "lat=";
@@ -233,7 +233,7 @@ const getweatherbit = async (url) =>{
 };
 
 
-*/
+
 //api clock
 
 const clockURL = "https://timeapi.io/api/Time/current/coordinate?"
@@ -252,3 +252,4 @@ const getTime = async (url) =>{
       console.log (error, "cant find time ")
   };
 };
+*/
