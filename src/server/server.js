@@ -113,10 +113,3 @@ app.post('/postTime', (request, response)=>{
 );
 
 
-app.get ('/'), (request,response)=>{
-response.send ("hello world")
-};
-
-app.get('/greeting'), (request,response)=>{
-  response.json({greeting :'hello'})
-}
