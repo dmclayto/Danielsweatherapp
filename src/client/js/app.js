@@ -71,8 +71,8 @@ button.addEventListener('click', (performAction) =>{
       .then (()=>{
           getCoordinates(information)
       
-          .then ((coord)=>{
-        getweatherbit ( weatherbitwebCurrent + webLat + coord[1] + webLon + coord[0] + weatherbitAPIKey)
+       //   .then ((coord)=>{
+      //  getweatherbit ( weatherbitwebCurrent + webLat + coord[1] + webLon + coord[0] + weatherbitAPIKey)
         
         .then ((data)=>{
         postData ('https://myweatherappus.herokuapp.com/postMore', {statecode: data.state_code, timezone: data.timezone})
@@ -98,7 +98,7 @@ postData ('https://myweatherappus.herokuapp.com/postTime',{time: data.time, dayO
 })
 })
 })
-})
+//})
 // Get the data from API. 
 const getWeather = async (url) =>{
     try {
@@ -151,7 +151,8 @@ const updateUI = async () => {
    
 
    temperature.innerHTML = `<p>Current : ${allData[0].temp}&#176; C</p>`;
-   town.innerHTML =  `<p> ${allData[1].town} , ${yo.statecode}</p>`;
+   //town.innerHTML =  `<p> ${allData[1].town} , ${yo.statecode}</p>`;
+   town.innerHTML =  `<p> ${allData[1].town} </p>`;
    
    max.innerHTML = `<p> max : ${allData[2].temp_max}&#176; C</p>`;
    min.innerHTML = `<p> min : ${allData[3].temp_min}&#176; C</p>`;
