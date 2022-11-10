@@ -68,14 +68,14 @@ button.addEventListener('click', (performAction) =>{
    .then (function(data ) {
       postData('https://myweatherappus.herokuapp.com/post',{temp: Math.round(data.main.temp),temp_max: Math.round(data.main.temp_max),temp_min: Math.round(data.main.temp_min), town: data.name, humidity: data.main.humidity, pressure: data.main.pressure, wind: data.wind.speed, description: data.weather[0].description, icon: data.weather[0].icon, timezone: data.timezone, clouds: data.clouds.all})
        
-    //  .then (()=>{
-      //    getCoordinates(information)
+      .then (()=>{
+          getCoordinates(information)
       
        //   .then ((coord)=>{
       //  getweatherbit ( weatherbitwebCurrent + webLat + coord[1] + webLon + coord[0] + weatherbitAPIKey)
         
-        .then ((data)=>{
-        postData ('https://myweatherappus.herokuapp.com/postMore', {statecode: data.state_code, timezone: data.timezone})
+       // .then ((data)=>{
+       // postData ('https://myweatherappus.herokuapp.com/postMore', {statecode: data.state_code, timezone: data.timezone})
       
   .then ((coord)=>{
 getTime (clockURL + latitude + coord[1] + longitude + coord[0])
