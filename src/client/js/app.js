@@ -235,7 +235,7 @@ const getweatherbit = async (url) =>{
 
 */
 //api clock
-/*
+
 const clockURL = "https://timeapi.io/api/Time/current/coordinate?"
 const latitude = "latitude=";
 const longitude = "&longitude=";
@@ -252,4 +252,3 @@ const getTime = async (url) =>{
       console.log (error, "cant find time ")
   };
 };
-*/
