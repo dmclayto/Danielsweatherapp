@@ -80,9 +80,9 @@ button.addEventListener('click', (performAction) =>{
  // .then (()=>{
 //getTime (clockURL + latitude + coord[1] + longitude + coord[0])
   
-.then ((data)=>{
+//.then ((data)=>{
 
-postData ('https://myweatherappus.herokuapp.com/postTime',{time: data.time, dayOfWeek: data.dayOfWeek, date: data.date})
+//postData ('https://myweatherappus.herokuapp.com/postTime',{time: data.time, dayOfWeek: data.dayOfWeek, date: data.date})
       
    
   
@@ -95,7 +95,7 @@ postData ('https://myweatherappus.herokuapp.com/postTime',{time: data.time, dayO
 
   });
 })
-})
+//})
 //})
 //})
 //})
@@ -162,7 +162,7 @@ const updateUI = async () => {
    description.innerHTML =  `<p> ${allData[7].description}</p>`;
   
   icon.innerHTML =  `<p> <img src="http://openweathermap.org/img/wn/${allData[8].icon}@2x.png"</p>`;
-  timeZone.innerHTML =  `<p> ${allData[9].timezone}</p>`;
+ // timeZone.innerHTML =  `<p> ${allData[9].timezone}</p>`;
  
   clouds.innerHTML =  `<p> ${allData[10].clouds} % clouds</p>`;
  cardHeading.innerHTML = `<p>Today</p>`;
@@ -171,8 +171,8 @@ const updateUI = async () => {
  
  message.innerHTML= `<p>Weather for ${allData[1].town}</p>`;
  //zone.innerHTML = `<p>${yo.timezone}</p>`;
- time.innerHTML = `<p> ${areaTime.time}`
- date.innerHTML = `<p> ${areaTime.dayOfWeek}  ${areaTime.date} `
+ //time.innerHTML = `<p> ${areaTime.time}`
+ //date.innerHTML = `<p> ${areaTime.dayOfWeek}  ${areaTime.date} `
  
  //dynamic styling
 icon.style.cssText = `background: rgba(24,24,27,0.6); border-radius: 10px;`;
@@ -235,7 +235,7 @@ const getweatherbit = async (url) =>{
 
 */
 //api clock
-
+/*
 const clockURL = "https://timeapi.io/api/Time/current/coordinate?"
 const latitude = "latitude=";
 const longitude = "&longitude=";
@@ -252,3 +252,4 @@ const getTime = async (url) =>{
       console.log (error, "cant find time ")
   };
 };
+*/
