@@ -8,6 +8,11 @@
     "build-dev": "webpack-dev-server  --config webpack.dev.js --open",
     "test": "jest"
   },
+
+  "engines": {
+    "node": "16.x",
+    "npm": "8.19.2"
+  },
   "keywords": [
     "node",
     "heroku",
@@ -44,9 +49,6 @@
     "webpack": "^5.75.0",
     "webpack-dev-server": "^4.11.1",
     "workbox-webpack-plugin": "^6.5.4"
-  },
-  "engines": {
-    "node": "16.17.0",
-    "npm": "8.19.2"
   }
+ 
 }
