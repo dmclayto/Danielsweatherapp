@@ -77,8 +77,8 @@ button.addEventListener('click', (performAction) =>{
         .then ((data)=>{
         postData ('https://myweatherappus.herokuapp.com/postMore', {statecode: data.state_code, timezone: data.timezone})
       
-  .then (()=>{
-getTime (clockURL + latitude + coord[1] + longitude + coord[0])
+ // .then (()=>{
+//getTime (clockURL + latitude + coord[1] + longitude + coord[0])
   
 .then ((data)=>{
 
@@ -96,7 +96,7 @@ postData ('https://myweatherappus.herokuapp.com/postTime',{time: data.time, dayO
   });
 })
 })
-})
+//})
 //})
 //})
 // Get the data from API. 
