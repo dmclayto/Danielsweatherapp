@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family:  'poppins', sans-serif;
+   background-image: url(/src/client/images/background.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+ //  overflow: hidden;
+   height: 100vh;
+}
+
+
+
+
+input{
+   
+    height: 60px;
+    width: 320px;
+    background: rgba(59, 74, 107, .8);
+    color: whitesmoke;
+    font-size: 30px;
+    font-family: 'Oswald', sans-serif;
+    border: 1px solid white;
+}
+
+button{
+    width: 100px;
+    height: 50px;
+    background: #3b4a6b;
+    color: whitesmoke;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border: 1px solid white;
+    box-shadow: 2px 4px 5px #444;
+   
+}
+
+.flex__search{
+    display: flex;
+   flex-direction: column;
+    justify-content: center;
+  
+
+
+    gap: 1em;
+   
+
+}
+
+
+.container{
+    padding: 20px 70px;
+    color: white;
+    justify-content: center;
+
+}
+
+.date__container{
+    font-weight: 100;
+   
+}
+
+.date__container .time{
+  font-size: 70px;
+  font-weight: 100;
+
+
+}
+.date__container #am-pm{
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.date__container .date{
+    font-size: 30px;
+}
+
+
+
+.place__container .timezone{
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.place__container .country{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.current-info{
+    display: flex;
+    flex-direction: row;
+ 
+    justify-content: space-between;
+}
+
+.current-info .others{
+    display: flex;
+    flex-direction: column;
+    background: rgba(24,24,27,0.6);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 1px solid #eee;
+ 
+}
+
+.current-info .others .weather__item{
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+}
+
+.weather__forecast{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+    background: #3c3c44;
+   height: 25px;
+   width: 100px;
+   margin-top: 20px;
+   border-radius: 50px;
+
+}
+
+.day{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#country{
+    color: rgb(238, 220, 220);
+    font-size: 20px;
+}
+
+.headline {
+    color:rgb(238, 220, 220);
+   
+
+}
+.title{
+    color: rgb(221, 219, 219);
+    text-decoration: underline;
+    text-align: center;
+}
+
+
+h1{
+    font-size: 40px;
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 30px;
+   
+}
+
+.weather__item{
+gap: 2rem;
+}
+
+
+
+//typical mobile devices
+@media only screen and (min-width:320px) and (max-width: 479px) {
+
+    h1{
+        font-size: 30px;
+    }
+
+    // sizing the banner
+    .date__container .time{
+        font-size: 16px;
+        font-weight: 100;
+      }
+      .date__container #am-pm{
+        font-size: 10px;
+        margin-left: 5px;
+    }
+    
+    .date__container .date{
+        font-size: 12px;
+    }
+
+
+
+
+
+
+    .place__container .country{
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+
+   
+
+    #country{
+        font-size: 8px;
+    }
+
+
+}
+
+
+
+//mobile landscape
+@media only screen and (min-width:480px) and (max-width: 767px) {
+
+    h1{
+        font-size: 30px;
+    }
+
+    // sizing the banner
+    .date__container .time{
+        font-size: 16px;
+        font-weight: 100;
+      }
+      .date__container #am-pm{
+        font-size: 10px;
+        margin-left: 5px;
+    }
+    
+    .date__container .date{
+        font-size: 12px;
+    }
+
+
+
+    input{
+   
+        height: 50px;
+        width: 150px;
+        font-size: 15px;
+    }
+
+    button{
+        width: 80px;
+        height: 50px;
+        font-size: 20px;
+        font-family: 'Oswald', sans-serif;
+     
+    }
+
+
+
+    .place__container .country{
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+
+
+
+
+    #country{
+        font-size: 12px;
+    }
+
+
+}
+
+
+
+
+
+
+
