@@ -20,6 +20,7 @@ app.use(bodyParser.json());
 // Cors for cross origin allowance
 const cors = require ('cors');
 const { request } = require('http');
+const { response } = require('express');
 
 app.use(cors ());
 
@@ -107,3 +108,12 @@ app.post('/postTime', (request, response)=>{
   response.send(timeData);
 }
 );
+
+
+app.get ('/'), (request,response)=>{
+response.send ("hello world")
+};
+
+app.get('/greeting'), (request,response)=>{
+  response.json({greeting :'hello'})
+}
