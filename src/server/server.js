@@ -27,7 +27,7 @@ app.use(cors ());
 // Initialize the main project folder
 app.use(express.static('dist'));
 
-app.get('/all', function (req, res) {
+app.get('/distfolder', function (req, res) {
   res.sendFile('dist/index.html')
 // res.sendFile(path.resolve('src/client/views/index.html'))
 })
