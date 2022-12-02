@@ -27,6 +27,8 @@ const clouds = document.getElementById('clouds');
 const message = document.getElementById('message');
 const zone = document.getElementById('advanced__time__zone');
 
+//use link below to route for heroku server instead of local http
+//https://myweatherappus.herokuapp.com
 /*
 //Getting Time & date
 
@@ -66,7 +68,7 @@ button.addEventListener('click', (performAction) =>{
     getWeather (information)
    
    .then (function(data ) {
-      postData('https://myweatherappus.herokuapp.com/post',{temp: Math.round(data.main.temp),temp_max: Math.round(data.main.temp_max),temp_min: Math.round(data.main.temp_min), town: data.name, humidity: data.main.humidity, pressure: data.main.pressure, wind: data.wind.speed, description: data.weather[0].description, icon: data.weather[0].icon, timezone: data.timezone, clouds: data.clouds.all})
+      postData('http://localhost:8089/post',{temp: Math.round(data.main.temp),temp_max: Math.round(data.main.temp_max),temp_min: Math.round(data.main.temp_min), town: data.name, humidity: data.main.humidity, pressure: data.main.pressure, wind: data.wind.speed, description: data.weather[0].description, icon: data.weather[0].icon, timezone: data.timezone, clouds: data.clouds.all})
        
      // .then (()=>{
        //   getCoordinates(information)
@@ -141,9 +143,9 @@ const postData = async( url, data = {}) => {
 
 //updating the app 
 const updateUI = async () => {
-  const request = await fetch('https://myweatherappus.herokuapp.com/all');
-  const request2 = await fetch('https://myweatherappus.herokuapp.com/more');
-  const request3 = await fetch('https://myweatherappus.herokuapp.com/time');
+  const request = await fetch('http://localhost:8089/all');
+  const request2 = await fetch('http://localhost:8089/more');
+  const request3 = await fetch('http://localhost:8089/time');
   try{
     const allData = await request.json();
     const yo = await request2.json();
