@@ -30,7 +30,7 @@ const zone = document.getElementById('advanced__time__zone');
 //use link below to route for heroku server instead of local http
 //https://myweatherappus.herokuapp.com
 /*
-//Getting Time & date
+//Getting current Time & date
 
 const days = ['Sunday', 'Monday', 'Tueday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -70,21 +70,21 @@ button.addEventListener('click', (performAction) =>{
    .then (function(data ) {
       postData('http://localhost:8089/post',{temp: Math.round(data.main.temp),temp_max: Math.round(data.main.temp_max),temp_min: Math.round(data.main.temp_min), town: data.name, humidity: data.main.humidity, pressure: data.main.pressure, wind: data.wind.speed, description: data.weather[0].description, icon: data.weather[0].icon, timezone: data.timezone, clouds: data.clouds.all})
        
-     // .then (()=>{
-       //   getCoordinates(information)
+      .then (()=>{
+          getCoordinates(information)
       
-       //   .then ((coord)=>{
-      //  getweatherbit ( weatherbitwebCurrent + webLat + coord[1] + webLon + coord[0] + weatherbitAPIKey)
+          .then ((coord)=>{
+        getweatherbit ( weatherbitwebCurrent + webLat + coord[1] + webLon + coord[0] + weatherbitAPIKey)
         
-       // .then ((data)=>{
-       // postData ('https://myweatherappus.herokuapp.com/postMore', {statecode: data.state_code, timezone: data.timezone})
+        .then ((data)=>{
+        postData ('https://myweatherappus.herokuapp.com/postMore', {statecode: data.state_code, timezone: data.timezone})
       
- // .then ((coord)=>{
-//getTime (clockURL + latitude + coord[1] + longitude + coord[0])
+  .then ((coord)=>{
+getTime (clockURL + latitude + coord[1] + longitude + coord[0])
   
-//.then ((data)=>{
+.then ((data)=>{
 
-//postData ('https://myweatherappus.herokuapp.com/postTime',{time: data.time, dayOfWeek: data.dayOfWeek, date: data.date})
+postData ('https://myweatherappus.herokuapp.com/postTime',{time: data.time, dayOfWeek: data.dayOfWeek, date: data.date})
       
    
   
@@ -96,11 +96,11 @@ button.addEventListener('click', (performAction) =>{
        });
 
   });
-//})
-//})
-//})
-//})
-//})
+})
+})
+})
+})
+})
 // Get the data from API. 
 const getWeather = async (url) =>{
     try {
@@ -193,7 +193,7 @@ message.style.cssText = `background: rgb(37, 59, 105); border-radius: 10px; padd
 
 
 
-/*
+
 // extra part
 
 // get coordiates for next api
@@ -254,4 +254,3 @@ const getTime = async (url) =>{
       console.log (error, "cant find time ")
   };
 };
-*/
